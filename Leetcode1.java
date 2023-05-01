@@ -7,21 +7,24 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
+
 public class Leetcode1 {
 
     public static int[] twoSum(int[] arr, int target){
 
-        int[] tempArr = new int[2];
+        //bruteforce method of solving
 
-        for(int x = 0; x < arr.length - 1; x++){
+        for(int x = 0; x < arr.length - 1; x++){ //for each number in array
 
-            if(arr[x] + arr[x + 1] == target){
+            for(int y = x + 1; y < arr.length; y++){ //compare to the rest of array
 
-                tempArr[0] = x;
+                if(arr[x] + arr[y] == target && arr[x] != arr[y]){ 
+                    
+                    //if numbers in comparison add up to our target and aren't duplicates, return them
 
-                tempArr[1] = x + 1;
+                    return new int[]{x,y};
 
-                return tempArr;
+                }
 
             }
 
