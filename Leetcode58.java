@@ -8,26 +8,30 @@
   */
   public class Leetcode58{
 
-    public static String lengthOfLastWord(String str){
+    public static int lengthOfLastWord(String str){
 
         str = str.trim();
 
+        //removes uneccesary whitespace
+
         int b = str.length() - 1;
 
-        while(str.charAt(b) != " "){
+        while(b >= 0 && str.charAt(b) != ' '){
 
+            //tracks length of last word after space
+            
             b--;
 
         }
 
-        return str.length() - b;
+        return str.length() - (b + 1);
 
 
     }
 
       public static void main(String args[]){
 
-        Ststem.out.println(lengthOfLastWord(args[0]));
+        System.out.println(lengthOfLastWord(args[0]));
 
     }
   }
