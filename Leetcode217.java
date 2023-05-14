@@ -4,8 +4,9 @@
  * 
  * Solution to Leetcode 217: Contains Duplicate
  * 
+ * Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+ * 
  */
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class Leetcode217 {
@@ -28,31 +29,17 @@ public class Leetcode217 {
 
     public static void main(String args[]){
 
-        String temp;
-
-        String[] tempArr; //instance variables
-
         int[] input;
-
-        Scanner sc = new Scanner(System.in);
-
-        temp = sc.nextLine(); //user array input
-
-        tempArr = new String[temp.split(",").length]; //creates string array with length of user input
-
-        tempArr = temp.split(","); //splits string input into string array
 
         input = new int[tempArr.length]; //creates int array for string array to be parsed into
 
         for (int i = 0; i < tempArr.length; i++) {
 
-            input[i] = Integer.parseInt(tempArr[i]); //parses string array into int array
+            input[i] = Integer.parseInt(args[i]); //parses string array into int array
 
         }
 
         System.out.println(containsDupliate(input)); //prints result of method call
-
-        sc.close();
 
     }
     
