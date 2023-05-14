@@ -2,17 +2,16 @@
  * @author Jankee
  * @version 1.0
  * 
- * Solution to LeetCode problem 14: Longest Common prefix
+ * Solution to LeetCode problem 14: Longest Common Prefix
+ * 
+ * method for finding longest common prefix amongst (all) strings in an array
  * 
  */
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Leetcode14{
 
-    public String longestCommonPrefix(String[] strs) {
-
-        //method for finding longest common prefix amongst (all) strings in an array
+    public static String longestCommonPrefix(String[] strs) {
 
         //since every string needs to be common, after sorting the array the first and last are all that need to be compared.
 
@@ -52,18 +51,8 @@ public class Leetcode14{
     
 
     public static void main(String args[]){
-
-        String temp = "";
-
-        Scanner sc = new Scanner(System.in);
-
-        Leetcode14 leetcode14 = new Leetcode14();
         
-        temp = sc.nextLine();
-        
-        System.out.println(leetcode14.longestCommonPrefix(temp.split(", ")));
-
-        sc.close();
+        System.out.println(longestCommonPrefix(args));
 
     }
 
