@@ -5,7 +5,6 @@
  * Solution to Leetcode 1: Two Sum
  * 
  */
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class Leetcode1 {
@@ -43,9 +42,7 @@ public class Leetcode1 {
 
         int target;
 
-        Scanner sc = new Scanner(System.in);
-
-        temp = sc.nextLine(); //user array input
+        temp = args[0];
 
         tempArr = new String[temp.split(",").length]; //creates string array with length of user input
 
@@ -59,13 +56,11 @@ public class Leetcode1 {
 
         }
 
-        temp = sc.nextLine();
+        temp = args[1];
 
         target = Integer.parseInt(temp);
 
         System.out.println(Arrays.toString(twoSum(input, target))); //prints result of method call
-
-        sc.close();
 
     }
     
