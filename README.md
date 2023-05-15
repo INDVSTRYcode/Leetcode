@@ -1,1 +1,1 @@
-Just my solutions for Leetcode problems, nothing special.
+Just my solutions for Leetcode problems written in Java, nothing special.
