@@ -31,9 +31,9 @@ public class Leetcode217 {
 
         int[] input;
 
-        input = new int[tempArr.length]; //creates int array for string array to be parsed into
+        input = new int[args.length]; //creates int array for string array to be parsed into
 
-        for (int i = 0; i < tempArr.length; i++) {
+        for (int i = 0; i < args.length; i++) {
 
             input[i] = Integer.parseInt(args[i]); //parses string array into int array
 
