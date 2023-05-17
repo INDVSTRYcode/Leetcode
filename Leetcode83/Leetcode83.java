@@ -13,7 +13,11 @@ public class Leetcode83{
 
         for(int x = 0; x < list.getSize() - 1; x++){
 
+            //for every node in list, compare adjacent nodes data
+
             if (list.locatePosition(x) == list.locatePosition(x + 1)) {
+
+                //if data is duplicate remove left node
 
                 list.removeMiddle(list.locatePosition(x));
 
@@ -32,6 +36,8 @@ public class Leetcode83{
         for(int x = 0; x < args[0].length(); x++){
 
             if(args[0].charAt(x) != ',' && args[0].charAt(x) != ' '){
+
+                //turns string into linkedList
                 
                 list.addToEnd(Integer.parseInt(Character.toString(args[0].charAt(x))));
             
